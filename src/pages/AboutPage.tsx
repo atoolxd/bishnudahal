@@ -22,7 +22,7 @@ export function AboutPage() {
           <div className="relative group">
             <div className="absolute inset-0 bg-blue-600 rounded-2xl transform translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300"></div>
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-slate-800 shadow-xl border border-slate-700">
-              <img src="/image.png" alt="Bishnu Dahal Portrait" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700" />
+              <img src="/bishnudahal.png" alt="Bishnu Dahal Portrait" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700" />
             </div>
           </div>
 

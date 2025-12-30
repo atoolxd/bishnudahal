@@ -27,7 +27,8 @@ export function Navigation() {
   }, {
     to: '/timeline',
     label: 'Timeline'
-  }, {
+  },
+  { to: '/gallery', label: 'Gallery' }, {
     to: '/blog',
     label: 'Blog'
   }, {

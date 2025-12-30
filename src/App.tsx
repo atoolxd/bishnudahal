@@ -7,6 +7,7 @@ import { TimelinePage } from './pages/TimelinePage';
 import { AboutPage } from './pages/AboutPage';
 import { BlogPage } from './pages/BlogPage';
 import { ContactPage } from './pages/ContactPage';
+import { GalleryPage } from './pages/GalleryPage';
 // Simple ScrollToTop component to ensure pages start at top on navigation
 function ScrollToTopWrapper() {
   const location = useLocation();
@@ -28,6 +29,7 @@ export function App() {
             <Route path="/timeline" element={<TimelinePage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
           </Routes>
         </main>
 

@@ -4,95 +4,92 @@ import { Link } from 'react-router-dom';
 export function HomePage() {
   return <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-screen pt-32 pb-16 px-6 flex flex-col items-center justify-center text-center relative overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute top-20 left-10 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-orange-600/10 rounded-full blur-3xl -z-10 animate-pulse-slow" style={{
-        animationDelay: '1s'
-      }}></div>
+      <section className="min-h-screen pt-32 pb-16 px-6 relative overflow-hidden">
+  {/* Background decorative elements */}
+  <div className="absolute top-20 left-10 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
+  <div
+    className="absolute bottom-20 right-10 w-80 h-80 bg-orange-600/10 rounded-full blur-3xl -z-10 animate-pulse-slow"
+    style={{ animationDelay: '1s' }}
+  ></div>
 
-        <div className="max-w-3xl w-full space-y-12 animate-fade-in">
-          {/* Portrait */}
-          <div className="relative mx-auto w-48 h-48 mb-8 group">
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-orange-500 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-            <div className="relative w-full h-full rounded-full bg-slate-800 p-1.5 ring-1 ring-slate-700 shadow-xl overflow-hidden">
-              <img src="/image.png" alt="Bishnu Dahal" className="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-700 ease-out" />
-            </div>
-          </div>
+  <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    
+    {/* LEFT: Text Content */}
+    <div className="space-y-10 text-center lg:text-left animate-fade-in">
+      <div className="space-y-3">
+        <h2 className="text-sm uppercase tracking-[0.2em] text-blue-400 font-semibold">
+          Social Activist & Entrepreneur
+        </h2>
 
-          {/* Typography Hierarchy */}
-          <div className="space-y-8">
-            <div className="space-y-2">
-              <h2 className="text-sm uppercase tracking-[0.2em] text-blue-400 font-semibold animate-slide-up" style={{
-              animationDelay: '0.1s'
-            }}>
-                Social Activist & Entrepreneur
-              </h2>
-              <h1 className="text-5xl md:text-7xl font-serif font-medium text-slate-50 tracking-tight leading-tight animate-slide-up" style={{
-              animationDelay: '0.2s'
-            }}>
-                Bishnu{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-50 to-slate-400">
-                  Dahal
-                </span>
-              </h1>
-            </div>
+        <h1 className="text-5xl md:text-6xl xl:text-7xl font-serif font-medium text-slate-50 leading-tight">
+          Bishnu{' '}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-50 to-slate-400">
+            Dahal
+          </span>
+        </h1>
+      </div>
 
-            <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto rounded-full animate-slide-up" style={{
-            animationDelay: '0.3s'
-          }}></div>
+      <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full mx-auto lg:mx-0"></div>
 
-            <p className="text-lg md:text-xl text-slate-300 font-light leading-relaxed max-w-xl mx-auto animate-slide-up" style={{
-            animationDelay: '0.4s'
-          }}>
-              Dedicated to community development, youth empowerment, and driving
-              sustainable social change through leadership and service.
-            </p>
-          </div>
+      <p className="text-lg md:text-xl text-slate-300 font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+        Dedicated to community development, youth empowerment, and driving
+        sustainable social change through leadership and service.
+      </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 animate-slide-up" style={{
-          animationDelay: '0.5s'
-        }}>
-            <Link to="/about" className="px-8 py-4 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-600/20 hover:-translate-y-1 flex items-center gap-2 group">
-              About Me{' '}
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link to="/contact" className="px-8 py-4 bg-slate-800 border border-slate-700 text-slate-100 rounded-full text-sm font-medium hover:border-blue-500/50 hover:bg-slate-700 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
-              Get in Touch
-            </Link>
-          </div>
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <Link
+          to="/about"
+          className="px-8 py-4 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-all shadow-lg flex items-center gap-2 group"
+        >
+          About Me
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </Link>
 
-          {/* Social Links */}
-          <div className="pt-12 flex items-center justify-center gap-6 animate-slide-up" style={{
-          animationDelay: '0.6s'
-        }}>
-            {[{
-            icon: Facebook,
-            label: 'Facebook',
-            color: 'hover:text-blue-400'
-          }, {
-            icon: Twitter,
-            label: 'Twitter',
-            color: 'hover:text-sky-400'
-          }, {
-            icon: Linkedin,
-            label: 'LinkedIn',
-            color: 'hover:text-blue-500'
-          }, {
-            icon: Instagram,
-            label: 'Instagram',
-            color: 'hover:text-pink-400'
-          }, {
-            icon: Mail,
-            label: 'Email',
-            color: 'hover:text-slate-100'
-          }].map((social, index) => <a key={index} href="#" className={`text-slate-500 ${social.color} transition-all transform hover:-translate-y-1 hover:scale-110 duration-300 p-2 hover:bg-slate-800 hover:shadow-sm rounded-full`} aria-label={social.label}>
-                <social.icon size={20} strokeWidth={1.5} />
-              </a>)}
-          </div>
+        <Link
+          to="/contact"
+          className="px-8 py-4 bg-slate-800 border border-slate-700 text-slate-100 rounded-full text-sm font-medium hover:bg-slate-700 transition-all"
+        >
+          Get in Touch
+        </Link>
+      </div>
+
+      {/* Social Links */}
+      <div className="flex gap-5 justify-center lg:justify-start pt-6">
+        {[Facebook, Twitter, Linkedin, Instagram, Mail].map((Icon, i) => (
+          <a
+            key={i}
+            href="#"
+            className="text-slate-500 hover:text-blue-400 transition transform hover:-translate-y-1 p-2 rounded-full hover:bg-slate-800"
+          >
+            <Icon size={20} />
+          </a>
+        ))}
+      </div>
+    </div>
+
+    {/* RIGHT: Portrait */}
+    <div className="relative mx-auto lg:ml-auto max-w-md">
+      <div className="aspect-[4/5] relative rounded-2xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+        <img
+          src="/bishnudahal.png"
+          alt="Bishnu Dahal"
+          className="object-cover w-full h-full"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent opacity-60"></div>
+        <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+          <p className="font-bold text-xl">Bishnu Dahal</p>
+          <p className="text-blue-100">Social Activist & Entrepreneur</p>
         </div>
-      </section>
+      </div>
+
+      {/* Decorative blobs */}
+      <div className="absolute -z-10 top-10 -right-10 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute -z-10 -bottom-10 -left-10 w-72 h-72 bg-blue-200 rounded-full blur-3xl opacity-50"></div>
+    </div>
+
+  </div>
+</section>
 
       {/* Impact Stats Section */}
       <section className="py-24 px-6 bg-slate-800/30 relative overflow-hidden">
