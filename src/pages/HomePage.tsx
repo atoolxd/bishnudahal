@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 export function HomePage() {
   return <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-screen pt-32 pb-16 px-6 relative overflow-hidden">
+      <section className="min-h-screen pt-32 pb-16 px-6 relative overflow-hidden flex items-center">
   {/* Background decorative elements */}
-  <div className="absolute top-20 left-10 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
+  <div className="absolute top-20 left-10 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl animate-pulse-slow"></div>
   <div
-    className="absolute bottom-20 right-10 w-80 h-80 bg-orange-600/10 rounded-full blur-3xl -z-10 animate-pulse-slow"
+    className="absolute bottom-20 right-10 w-80 h-80 bg-orange-600/10 rounded-full blur-3xl animate-pulse-slow"
     style={{ animationDelay: '1s' }}
   ></div>
 
@@ -68,9 +68,9 @@ export function HomePage() {
       </div>
     </div>
 
-    {/* RIGHT: Portrait */}
+    {/* RIGHT: Portrait with hover effect */}
     <div className="relative mx-auto lg:ml-auto max-w-md">
-      <div className="aspect-[4/5] relative rounded-2xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+      <div className="aspect-[4/5] relative rounded-2xl overflow-hidden shadow-2xl hover:scale-[1.05] hover:-translate-y-3 hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)] transition-all duration-500 ease-out">
         <img
           src="/bishnudahal.png"
           alt="Bishnu Dahal"

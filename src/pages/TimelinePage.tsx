@@ -7,37 +7,88 @@ interface TimelineItem {
   description: string;
   type: 'rotary' | 'business' | 'social';
 }
-const timelineData: TimelineItem[] = [{
-  year: '2023 — Present',
-  title: 'District Governor Nominee',
-  organization: 'Rotary International District 3292',
-  description: 'Selected to lead the district, focusing on expanding membership and enhancing the impact of community service projects across Nepal.',
-  type: 'rotary'
-}, {
-  year: '2021 — 2022',
-  title: 'Club President',
-  organization: 'Rotary Club of Kathmandu',
-  description: 'Led the club to achieve 100% Paul Harris Fellow status. Initiated the "Clean Water for All" project serving 5,000+ rural villagers.',
-  type: 'rotary'
-}, {
-  year: '2018 — Present',
-  title: 'Founder & CEO',
-  organization: 'Dahal Enterprises',
-  description: 'Established a socially responsible business venture focusing on sustainable agriculture and export, supporting local farmers.',
-  type: 'business'
-}, {
-  year: '2016 — 2018',
-  title: 'Youth Service Chair',
-  organization: 'Rotaract District Committee',
-  description: 'Mentored over 500 young leaders, organizing leadership training workshops and coordinating nationwide youth volunteer campaigns.',
-  type: 'social'
-}, {
-  year: '2014 — 2016',
-  title: 'Community Project Lead',
-  organization: 'Local NGO',
-  description: 'Spearheaded the post-earthquake reconstruction efforts, rebuilding 3 schools and providing temporary shelter for 200 families.',
-  type: 'social'
-}];
+const timelineData: TimelineItem[] = [
+  {
+    year: '2023 — Present',
+    title: 'District Governor Nominee',
+    organization: 'Rotary International District 3292',
+    description:
+      'Selected to lead the district with a focus on strengthening Rotary clubs, expanding membership, and increasing the impact of community service projects across Nepal.',
+    type: 'rotary',
+  },
+  {
+    year: '2021 — 2022',
+    title: 'Club President',
+    organization: 'Rotary Club of Kathmandu',
+    description:
+      'Led the club to achieve major service milestones and actively supported education, health, and community development initiatives.',
+    type: 'rotary',
+  },
+  {
+    year: '2014',
+    title: 'Spokesperson',
+    organization: 'Yuwa Manch Nepal (YMN)',
+    description:
+      'Served as spokesperson after previously holding the role of treasurer, contributing to youth advocacy, leadership programs, and national-level engagement.',
+    type: 'social',
+  },
+  {
+    year: '2013',
+    title: 'Central Committee Member & Treasurer',
+    organization: 'Yuwa Manch Nepal (YMN)',
+    description:
+      'Joined the central committee and was promoted to treasurer, supporting organizational growth and managing financial responsibilities.',
+    type: 'social',
+  },
+  {
+    year: '2012',
+    title: 'Investor & Education Advocate',
+    organization: 'Nabin English School',
+    description:
+      'Invested in the school as part of a socio-business initiative, focusing on improving access to quality education and student welfare.',
+    type: 'business',
+  },
+  {
+    year: '2010',
+    title: 'Co-owner',
+    organization: 'Amrit Smriti School (formerly Madhavi English School)',
+    description:
+      'Entered the education sector with a vision to provide quality early schooling and scholarship opportunities to over 500 students.',
+    type: 'business',
+  },
+  {
+    year: '2008',
+    title: 'Market Re-establishment Lead',
+    organization: 'Family Business – Malaysia',
+    description:
+      'Re-established the Malaysian market for the family business, strengthening cross-border operations and entrepreneurial confidence.',
+    type: 'business',
+  },
+  {
+    year: '2003',
+    title: 'Marketing Intern',
+    organization: 'Malaysian Corporations',
+    description:
+      'Worked as a marketing intern to learn business fundamentals, employee relations, and empathetic leadership practices.',
+    type: 'business',
+  },
+  {
+    year: '2002',
+    title: 'Founder',
+    organization: 'Jyoti Lingeshwar Youth Club',
+    description:
+      'Founded a social youth club in a remote area to promote sports, youth engagement, and community development.',
+    type: 'social',
+  },
+  {
+    year: '1997 — 2000',
+    title: 'Student Leader',
+    organization: 'School & District Level',
+    description:
+      'Actively involved in scouting, led school quiz teams to district victories, and won the Inter-School Speech Contest, building early leadership skills.',
+    type: 'social',
+  },
+]
 const getIcon = (type: string) => {
   switch (type) {
     case 'rotary':

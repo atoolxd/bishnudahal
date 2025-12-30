@@ -10,7 +10,7 @@ interface GalleryItem {
 export const GalleryPage: React.FC = () => {
   const images: GalleryItem[] = [
     {
-      src: '/gallery/1.jpg',
+      src: '/public/bishnudahal.png',
       title: 'Community Outreach',
       description: 'Youth empowerment program in rural Nepal',
     },
