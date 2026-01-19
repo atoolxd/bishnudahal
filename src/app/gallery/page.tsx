@@ -1,41 +1,46 @@
+'use client';
+
 import React, { useState } from 'react'
 import { X } from 'lucide-react'
+import Image, { StaticImageData } from 'next/image';
+import bishnu from '@/assets/images/image.png'
+
 
 interface GalleryItem {
-  src: string
+  src: StaticImageData | string
   title: string
   description: string
 }
 
-export const GalleryPage: React.FC = () => {
+export default function Gallery() {
   const images: GalleryItem[] = [
     {
-      src: '/public/bishnudahal.png',
+      src: bishnu,
       title: 'Community Outreach',
       description: 'Youth empowerment program in rural Nepal',
     },
     {
-      src: '/gallery/2.jpg',
+      src: bishnu,
       title: 'Clean Water Project',
       description: 'Installation of sustainable water systems',
     },
     {
-      src: '/gallery/3.jpg',
+      src: bishnu,
       title: 'Leadership Workshop',
       description: 'Training future community leaders',
     },
     {
-      src: '/gallery/4.jpg',
+      src: bishnu,
       title: 'Education Drive',
       description: 'Library setup for underprivileged students',
     },
     {
-      src: '/gallery/5.jpg',
+      src: bishnu,
       title: 'Health Awareness Camp',
       description: 'Free health checkups and awareness programs',
     },
     {
-      src: '/gallery/6.jpg',
+      src: bishnu,
       title: 'Women Empowerment',
       description: 'Skill development initiatives',
     },
@@ -65,12 +70,14 @@ export const GalleryPage: React.FC = () => {
             onClick={() => setSelected(item)}
             className="group relative cursor-pointer overflow-hidden rounded-2xl glass-card"
           >
-            <img
+           <div className="relative w-full h-72">
+            <Image
               src={item.src}
               alt={item.title}
-              className="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500"
+              fill
+              className="object-cover object-top transform group-hover:scale-110 transition duration-500"
             />
-
+           </div>
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent opacity-0 group-hover:opacity-100 transition" />
 
             <div className="absolute bottom-0 p-5 text-white opacity-0 group-hover:opacity-100 transition">
@@ -93,11 +100,14 @@ export const GalleryPage: React.FC = () => {
               <X size={28} />
             </button>
 
-            <img
-              src={selected.src}
-              alt={selected.title}
-              className="w-full max-h-[80vh] object-contain rounded-xl"
-            />
+            <div className="relative w-full h-[80vh]">
+              <Image
+                src={selected.src}
+                alt={selected.title}
+                fill
+                className="object-contain rounded-xl"
+              />
+            </div>
 
             <div className="text-center mt-4">
               <h3 className="text-xl text-slate-50 font-serif">

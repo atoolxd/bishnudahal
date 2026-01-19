@@ -1,29 +1,35 @@
 import React from 'react';
 import { Heart, Globe, Users, BookOpen, Award, Briefcase } from 'lucide-react';
-export function AboutPage() {
+import bishnu from '@/assets/images/bishnudahal.png';
+import Image from 'next/image';
+export default function About() {
   return <main className="min-h-screen pt-32 pb-24 px-6 relative">
       <div className="absolute top-0 right-0 w-1/2 h-screen bg-gradient-to-l from-slate-800/30 to-transparent -z-10"></div>
 
       <div className="max-w-4xl mx-auto space-y-20">
-        {/* Header Section */}
-        <header className="space-y-6 text-center max-w-2xl mx-auto animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-serif text-slate-50 font-medium">
-            About Me
-          </h1>
-          <div className="w-12 h-1 bg-blue-500 mx-auto rounded-full"></div>
-          <p className="text-xl text-slate-300 font-light leading-relaxed">
-            Driving positive social change through community leadership and
-            sustainable development initiatives.
-          </p>
-        </header>
+          <header className="space-y-6 text-center max-w-2xl mx-auto animate-fade-in">
+            <h1 className="text-4xl md:text-5xl font-serif text-slate-50 font-medium">
+              About Me
+            </h1>
+            <div className="w-12 h-1 bg-blue-500 mx-auto rounded-full"></div>
+            <p className="text-xl text-slate-300 font-light leading-relaxed">
+              Driving positive social change through community leadership and
+              sustainable development initiatives.
+            </p>
+          </header>
 
         {/* Bio Section with Image */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-slide-up">
           <div className="relative group">
             <div className="absolute inset-0 bg-blue-600 rounded-2xl transform translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300"></div>
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-slate-800 shadow-xl border border-slate-700">
-              <img src="/bishnudahal.png" alt="Bishnu Dahal Portrait" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700" />
-            </div>
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-slate-800 shadow-xl ">
+                <Image
+                  src={bishnu}
+                  alt="Bishnu Dahal"
+                  fill
+                  className="object-cover object-top hover:scale-105 transition-transform duration-700"
+                />
+              </div>
           </div>
 
           <div className="space-y-6">
