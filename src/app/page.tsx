@@ -7,7 +7,7 @@ import bishnu from "@/assets/images/bishnudahal.png"; // import the file
 export default function HomePage() {
   return <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-screen pt-32 pb-16 px-6 relative overflow-hidden flex items-center">
+      <section className="max-h-screen pt-32 px-6 relative overflow-hidden flex items-center">
   {/* Background decorative elements */}
   <div className="absolute top-20 left-10 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl animate-pulse-slow"></div>
   <div
@@ -32,7 +32,7 @@ export default function HomePage() {
         </h1>
       </div>
 
-      <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full mx-auto lg:mx-0"></div>
+      {/* <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full mx-auto lg:mx-0"></div> */}
 
       <p className="text-lg md:text-xl text-slate-300 font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
         Dedicated to community development, youth empowerment, and driving
@@ -58,7 +58,7 @@ export default function HomePage() {
       </div>
 
       {/* Social Links */}
-      <div className="flex gap-5 justify-center lg:justify-start pt-6">
+      {/* <div className="flex gap-5 justify-center lg:justify-start pt-6">
         {[Facebook, Twitter, Linkedin, Instagram, Mail].map((Icon, i) => (
           <a
             key={i}
@@ -68,12 +68,12 @@ export default function HomePage() {
             <Icon size={20} />
           </a>
         ))}
-      </div>
+      </div> */}
     </div>
 
     {/* RIGHT: Portrait with hover effect */}
     <div className="relative mx-auto lg:ml-auto max-w-md">
-      <div className="aspect-[4/5] relative rounded-2xl overflow-hidden shadow-2xl hover:scale-[1.05] hover:-translate-y-3 hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)] transition-all duration-500 ease-out">
+      <div className="aspect-[4/5] relative rounded-2xl overflow-hidden transition-all duration-500 ease-out">
         <div className="relative">
            <Image
             src={bishnu}
@@ -83,11 +83,11 @@ export default function HomePage() {
             className="object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent opacity-60"></div>
-        <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+        <div className="absolute inset-0 bg-transparent"></div>
+        {/* <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
           <p className="font-bold text-xl">Bishnu Dahal</p>
           <p className="text-blue-100">Social Activist & Entrepreneur</p>
-        </div>
+        </div> */}
       </div>
 
       {/* Decorative blobs */}

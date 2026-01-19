@@ -5,11 +5,11 @@ import { SITE_CONFIG, NAV_LINKS, SOCIAL_LINKS, FOCUS_AREAS } from '@/lib/utils/c
 
 export function Footer() {
   return (
-    <footer className="relative bg-slate-950 text-white pt-16 pb-8 mt-24">
+    <footer className="relative bg-slate-950 px-6 text-white pt-16 pb-8 mt-24">
       {/* Decorative gradient */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand Section */}
           <div className="md:col-span-1">

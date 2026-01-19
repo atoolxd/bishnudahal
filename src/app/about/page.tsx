@@ -1,6 +1,5 @@
 import React from 'react';
 import { Heart, Globe, Users, BookOpen, Award, Briefcase } from 'lucide-react';
-import bishnu from '@/assets/images/bishnudahal.png';
 import Image from 'next/image';
 export default function About() {
   return <main className="min-h-screen pt-32 pb-24 px-6 relative">
@@ -24,7 +23,7 @@ export default function About() {
             <div className="absolute inset-0 bg-blue-600 rounded-2xl transform translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300"></div>
                 <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-slate-800 shadow-xl ">
                 <Image
-                  src={bishnu}
+                  src="/assets/images/bishnudahal.png"
                   alt="Bishnu Dahal"
                   fill
                   className="object-cover object-top hover:scale-105 transition-transform duration-700"

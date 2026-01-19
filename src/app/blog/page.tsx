@@ -21,7 +21,7 @@ const posts: BlogPost[] = [
     category: 'Social Impact',
     excerpt:
       'Why sustainable change must start from within the community itself, and how we can support local leaders in driving this transformation.',
-    image: '/images/image.png',
+    image: '/assets/images/image.png',
   },
   {
     id: '2',
@@ -30,7 +30,7 @@ const posts: BlogPost[] = [
     category: 'Rotary',
     excerpt:
       'Looking back at our key achievements this year, from the literacy drive in rural districts to the successful sanitation project launch.',
-    image: '/images/image.png',
+    image: '/assets/images/image.png',
   },
   {
     id: '3',
@@ -39,7 +39,7 @@ const posts: BlogPost[] = [
     category: 'Youth',
     excerpt:
       "Today's youth are not just the leaders of tomorrow; they are the partners of today. Exploring how we can better engage young minds.",
-    image: '/images/image.png',
+    image: '/assets/images/image.png',
   },
   {
     id: '4',
@@ -48,7 +48,7 @@ const posts: BlogPost[] = [
     category: 'Perspective',
     excerpt:
       'How service projects can unite diverse groups of people and foster understanding across cultural and economic divides.',
-    image: '/images/blog4.jpg',
+    image: '/assets/images/blog4.jpg',
   },
 ];
 
