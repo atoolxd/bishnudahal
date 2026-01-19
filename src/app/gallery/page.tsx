@@ -3,7 +3,6 @@
 import React, { useState } from 'react'
 import { X } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image';
-import bishnu from '@/assets/images/image.png'
 
 
 interface GalleryItem {
@@ -15,32 +14,32 @@ interface GalleryItem {
 export default function Gallery() {
   const images: GalleryItem[] = [
     {
-      src: bishnu,
+      src: '/assets/images/bishnudahal.png',
       title: 'Community Outreach',
       description: 'Youth empowerment program in rural Nepal',
     },
     {
-      src: bishnu,
+      src: '/assets/images/bishnudahal.png',
       title: 'Clean Water Project',
       description: 'Installation of sustainable water systems',
     },
     {
-      src: bishnu,
+      src: '/assets/images/bishnudahal.png',
       title: 'Leadership Workshop',
       description: 'Training future community leaders',
     },
     {
-      src: bishnu,
+      src: '/assets/images/bishnudahal.png',
       title: 'Education Drive',
       description: 'Library setup for underprivileged students',
     },
     {
-      src: bishnu,
+      src: '/assets/images/bishnudahal.png',
       title: 'Health Awareness Camp',
       description: 'Free health checkups and awareness programs',
     },
     {
-      src: bishnu,
+      src: '/assets/images/bishnudahal.png',
       title: 'Women Empowerment',
       description: 'Skill development initiatives',
     },

@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { ArrowRight, Twitter, Linkedin, Mail, Facebook, Instagram, Users, Award, Heart, Globe, TrendingUp, BookOpen } from 'lucide-react';
 import Link from 'next/link';
-import bishnu from "@/assets/images/bishnudahal.png"; // import the file
+// import bishnu from "@/assets/images/bishnudahal.png"; // import the file
 
 export default function HomePage() {
   return <div className="min-h-screen">
@@ -76,7 +76,7 @@ export default function HomePage() {
       <div className="aspect-[4/5] relative rounded-2xl overflow-hidden transition-all duration-500 ease-out">
         <div className="relative">
            <Image
-            src={bishnu}
+            src="/assets/images/bishnudahal.png"
             alt="Bishnu Dahal"
             width={400}
             height={500}
