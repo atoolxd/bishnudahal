@@ -1,10 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 import { ArrowRight, Twitter, Linkedin, Mail, Facebook, Instagram, Users, Award, Heart, Globe, TrendingUp, BookOpen } from 'lucide-react';
-import { Link } from 'react-router-dom';
-export function HomePage() {
+import Link from 'next/link';
+
+export default function HomePage() {
   return <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-screen pt-32 pb-16 px-6 relative overflow-hidden flex items-center">
+      <section className="max-h-screen pt-32 px-6 relative overflow-hidden flex items-center">
   {/* Background decorative elements */}
   <div className="absolute top-20 left-10 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl animate-pulse-slow"></div>
   <div
@@ -29,7 +31,7 @@ export function HomePage() {
         </h1>
       </div>
 
-      <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full mx-auto lg:mx-0"></div>
+      {/* <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full mx-auto lg:mx-0"></div> */}
 
       <p className="text-lg md:text-xl text-slate-300 font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
         Dedicated to community development, youth empowerment, and driving
@@ -39,23 +41,23 @@ export function HomePage() {
       {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
         <Link
-          to="/about"
-          className="px-8 py-4 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-all shadow-lg flex items-center gap-2 group"
+          href="/about"
+          className="px-8 py-4 bg-blue-600 max-w-max text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-all shadow-lg flex items-center gap-2 group"
         >
           About Me
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </Link>
 
         <Link
-          to="/contact"
-          className="px-8 py-4 bg-slate-800 border border-slate-700 text-slate-100 rounded-full text-sm font-medium hover:bg-slate-700 transition-all"
+          href="/contact"
+          className="px-8 py-4 bg-slate-800 border  max-w-max border-slate-700 text-slate-100 rounded-full text-sm font-medium hover:bg-slate-700 transition-all"
         >
           Get in Touch
         </Link>
       </div>
 
       {/* Social Links */}
-      <div className="flex gap-5 justify-center lg:justify-start pt-6">
+      {/* <div className="flex gap-5 justify-center lg:justify-start pt-6">
         {[Facebook, Twitter, Linkedin, Instagram, Mail].map((Icon, i) => (
           <a
             key={i}
@@ -65,22 +67,26 @@ export function HomePage() {
             <Icon size={20} />
           </a>
         ))}
-      </div>
+      </div> */}
     </div>
 
     {/* RIGHT: Portrait with hover effect */}
     <div className="relative mx-auto lg:ml-auto max-w-md">
-      <div className="aspect-[4/5] relative rounded-2xl overflow-hidden shadow-2xl hover:scale-[1.05] hover:-translate-y-3 hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)] transition-all duration-500 ease-out">
-        <img
-          src="/bishnudahal.png"
-          alt="Bishnu Dahal"
-          className="object-cover w-full h-full"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent opacity-60"></div>
-        <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+      <div className="aspect-[4/5] relative rounded-2xl overflow-hidden transition-all duration-500 ease-out">
+        <div className="relative">
+           <Image
+            src="/assets/images/bishnudahal.png"
+            alt="Bishnu Dahal"
+            width={400}
+            height={500}
+            className="object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-transparent"></div>
+        {/* <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
           <p className="font-bold text-xl">Bishnu Dahal</p>
           <p className="text-blue-100">Social Activist & Entrepreneur</p>
-        </div>
+        </div> */}
       </div>
 
       {/* Decorative blobs */}
@@ -92,7 +98,7 @@ export function HomePage() {
 </section>
 
       {/* Impact Stats Section */}
-      <section className="py-24 px-6 bg-slate-800/30 relative overflow-hidden">
+      <section className=" py-24 px-6 bg-slate-800/30 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
 
         <div className="max-w-5xl mx-auto">
@@ -234,11 +240,11 @@ export function HomePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact" className="px-8 py-4 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-600/20 hover:-translate-y-1 flex items-center gap-2 group">
+              <Link href="/contact" className="px-8 py-4 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-600/20 hover:-translate-y-1 flex items-center gap-2 group">
                 Start a Conversation{' '}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link to="/timeline" className="px-8 py-4 bg-slate-800 border border-slate-700 text-slate-100 rounded-full text-sm font-medium hover:border-blue-500/50 hover:bg-slate-700 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+              <Link href="/timeline" className="px-8 py-4 bg-slate-800 border border-slate-700 text-slate-100 rounded-full text-sm font-medium hover:border-blue-500/50 hover:bg-slate-700 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
                 View My Journey
               </Link>
             </div>
