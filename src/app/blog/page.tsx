@@ -81,7 +81,6 @@ export default function Blog() {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 mix-blend-multiply"></div>
               </div>
 
-              {/* Content */}
               <div className="p-8 md:p-12 relative flex flex-col justify-center">
                 <div className="flex items-center gap-4 mb-4 text-xs uppercase tracking-widest">
                   <span className="px-2 py-1 bg-blue-500/10 text-blue-400 rounded-md font-medium">
