@@ -8,4 +8,3 @@ export * from './types/types';
 export * from './utils/utils';
 
 // Hooks
-export * from './hooks';
