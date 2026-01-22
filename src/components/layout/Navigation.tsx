@@ -41,15 +41,17 @@ export function Navigation() {
           href="/"
           className="text-xl font-serif font-bold text-slate-100 tracking-tight  transition-colors relative group"
         >
-          <Image
-            src="/assets/images/logo.png"
-            alt="Bishnu Dahal"
-            width={40}
-            height={40}
-            className="inline-block mr-2"
-          />
-          {/* <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full"></span> */}
-        </Link>
+          <div className="relative h-20 w-20">
+                 <div className="absolute inset-0 animate-spin rounded-full border-b-2 border-[#a6a010]"></div>
+                 <Image
+                   src="/assets/images/logo.png"
+                   alt="Loading Logo"
+                   fill
+                   className="object-contain p-3"
+                   priority
+                 />
+               </div>
+         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
