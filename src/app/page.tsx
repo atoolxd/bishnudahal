@@ -2,100 +2,21 @@ import React from 'react';
 import Image from 'next/image';
 import { ArrowRight, Twitter, Linkedin, Mail, Facebook, Instagram, Users, Award, Heart, Globe, TrendingUp, BookOpen } from 'lucide-react';
 import Link from 'next/link';
+import HeroSection from '@/components/hero/HeroSection';
+import DynamicHugeicon from '@/components/DynamicHugeicon';
 // import bishnu from "@/assets/images/bishnudahal.png"; // import the file
 
 export default function HomePage() {
   return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="max-h-screen pt-32 px-6 relative overflow-hidden flex items-center">
-  {/* Background decorative elements */}
   <div className="absolute top-20 left-10 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl animate-pulse-slow"></div>
   <div
     className="absolute bottom-20 right-10 w-80 h-80 bg-orange-600/10 rounded-full blur-3xl animate-pulse-slow"
     style={{ animationDelay: '1s' }}
   ></div>
 
-  <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-    
-    {/* LEFT: Text Content */}
-    <div className="space-y-10 text-center lg:text-left animate-fade-in">
-      <div className="space-y-3">
-        <h2 className="text-sm uppercase tracking-[0.2em] text-blue-400 font-semibold">
-          Social Activist & Entrepreneur
-        </h2>
-
-        <h1 className="text-5xl md:text-6xl xl:text-7xl font-serif font-medium text-slate-50 leading-tight">
-          Bishnu{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-50 to-slate-400">
-            Dahal
-          </span>
-        </h1>
-      </div>
-
-      {/* <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full mx-auto lg:mx-0"></div> */}
-
-      <p className="text-lg md:text-xl text-slate-300 font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-        Dedicated to community development, youth empowerment, and driving
-        sustainable social change through leadership and service.
-      </p>
-
-      {/* CTA Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-        <Link
-          href="/about"
-          className="px-8 py-4 bg-blue-600 max-w-max text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-all shadow-lg flex items-center gap-2 group"
-        >
-          About Me
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </Link>
-
-        <Link
-          href="/contact"
-          className="px-8 py-4 bg-slate-800 border  max-w-max border-slate-700 text-slate-100 rounded-full text-sm font-medium hover:bg-slate-700 transition-all"
-        >
-          Get in Touch
-        </Link>
-      </div>
-
-      {/* Social Links */}
-      {/* <div className="flex gap-5 justify-center lg:justify-start pt-6">
-        {[Facebook, Twitter, Linkedin, Instagram, Mail].map((Icon, i) => (
-          <a
-            key={i}
-            href="#"
-            className="text-slate-500 hover:text-blue-400 transition transform hover:-translate-y-1 p-2 rounded-full hover:bg-slate-800"
-          >
-            <Icon size={20} />
-          </a>
-        ))}
-      </div> */}
-    </div>
-
-    {/* RIGHT: Portrait with hover effect */}
-    <div className="relative mx-auto lg:ml-auto max-w-md">
-      <div className="aspect-[4/5] relative rounded-2xl overflow-hidden transition-all duration-500 ease-out">
-        <div className="relative">
-           <Image
-            src="/assets/images/bishnudahal.png"
-            alt="Bishnu Dahal"
-            width={400}
-            height={500}
-            className="object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-transparent"></div>
-        {/* <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-          <p className="font-bold text-xl">Bishnu Dahal</p>
-          <p className="text-blue-100">Social Activist & Entrepreneur</p>
-        </div> */}
-      </div>
-
-      {/* Decorative blobs */}
-      <div className="absolute -z-10 top-10 -right-10 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
-      <div className="absolute -z-10 -bottom-10 -left-10 w-72 h-72 bg-blue-200 rounded-full blur-3xl opacity-50"></div>
-    </div>
-
-  </div>
+ <HeroSection/>
 </section>
 
       {/* Impact Stats Section */}
@@ -182,7 +103,8 @@ export default function HomePage() {
                 <div className={`absolute top-0 right-0 w-32 h-32 bg-${project.color}-500/10 rounded-full blur-3xl opacity-50 group-hover:opacity-70 transition-opacity`}></div>
 
                 <div className={`inline-flex p-3 rounded-xl mb-6 bg-${project.color}-500/10 text-${project.color}-400 relative z-10`}>
-                  <project.icon size={24} />
+                  {/* <DynamicHugeicon iconName={item.icon} size={24} color="blue" /> */}
+
                 </div>
 
                 <h3 className="text-xl font-serif text-slate-50 mb-3 relative z-10">

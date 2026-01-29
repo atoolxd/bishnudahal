@@ -1,5 +1,7 @@
 import React from 'react';
 import { Briefcase, Heart, Globe } from 'lucide-react';
+import { useTimeline } from '@/hooks/useTimeline';
+
 interface TimelineItem {
   year: string;
   title: string;
@@ -130,7 +132,6 @@ export default function TimelinePage() {
                 animationDelay: `${index * 0.1}s`,
               }}
             >
-              {/* Left Side (Date/Content depending on index) */}
               <div
                 className={`md:w-1/2 md:px-12 ${
                   index % 2 === 0
