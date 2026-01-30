@@ -106,8 +106,7 @@ export function Footer() {
             © {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
           </p>
           <p className="text-slate-400 text-sm font-light flex items-center gap-1">
-            Made with <Heart size={14} className="text-red-500 fill-red-500" />{' '}
-            for a better world
+             <a href="https://sunbi.com.np/" target="_blank" rel="noopener noreferrer" className="">Developed by SunBi</a>
           </p>
         </div>
       </div>

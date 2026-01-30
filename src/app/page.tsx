@@ -4,6 +4,8 @@ import { ArrowRight, Twitter, Linkedin, Mail, Facebook, Instagram, Users, Award,
 import Link from 'next/link';
 import HeroSection from '@/components/hero/HeroSection';
 import DynamicHugeicon from '@/components/DynamicHugeicon';
+import FeaturedInitiatives from '@/components/hero/FeaturedInitiatives';
+import MakeImpact from '@/components/hero/Make-impact';
 // import bishnu from "@/assets/images/bishnudahal.png"; // import the file
 
 export default function HomePage() {
@@ -20,104 +22,9 @@ export default function HomePage() {
 </section>
 
       {/* Impact Stats Section */}
-      <section className=" py-24 px-6 bg-slate-800/30 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
-
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-serif text-slate-50 mb-4">
-              Making an Impact
-            </h2>
-            <p className="text-slate-400 font-light max-w-2xl mx-auto">
-              Through dedication and collaboration, we've achieved meaningful
-              milestones in community development.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[{
-            icon: Users,
-            number: '5000+',
-            label: 'Lives Impacted',
-            color: 'blue'
-          }, {
-            icon: Award,
-            number: '50+',
-            label: 'Projects Completed',
-            color: 'orange'
-          }, {
-            icon: Heart,
-            number: '10+',
-            label: 'Years of Service',
-            color: 'red'
-          }, {
-            icon: Globe,
-            number: '15+',
-            label: 'Communities Served',
-            color: 'green'
-          }].map((stat, index) => <div key={index} className="glass-card p-6 rounded-2xl text-center group hover:-translate-y-2 transition-all duration-300">
-                <div className={`inline-flex p-3 rounded-xl mb-4 bg-${stat.color}-500/10 text-${stat.color}-400 group-hover:scale-110 transition-transform`}>
-                  <stat.icon size={24} />
-                </div>
-                <div className="text-3xl font-bold text-slate-50 mb-1">
-                  {stat.number}
-                </div>
-                <div className="text-xs uppercase tracking-widest text-slate-400 font-medium">
-                  {stat.label}
-                </div>
-              </div>)}
-          </div>
-        </div>
-      </section>
-
+    <MakeImpact/>
       {/* Featured Work Section */}
-      <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-serif text-slate-50 mb-4">
-              Featured Initiatives
-            </h2>
-            <p className="text-slate-400 font-light max-w-2xl mx-auto">
-              Key projects that demonstrate our commitment to sustainable
-              community development.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[{
-            title: 'Clean Water Initiative',
-            description: 'Providing access to clean drinking water for 5,000+ rural villagers through sustainable infrastructure.',
-            icon: Globe,
-            color: 'blue'
-          }, {
-            title: 'Youth Leadership Program',
-            description: 'Mentoring 500+ young leaders through workshops and hands-on community service projects.',
-            icon: TrendingUp,
-            color: 'orange'
-          }, {
-            title: 'Literacy Drive',
-            description: 'Establishing libraries and reading programs in underserved communities across Nepal.',
-            icon: BookOpen,
-            color: 'purple'
-          }].map((project, index) => <div key={index} className="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
-                <div className={`absolute top-0 right-0 w-32 h-32 bg-${project.color}-500/10 rounded-full blur-3xl opacity-50 group-hover:opacity-70 transition-opacity`}></div>
-
-                <div className={`inline-flex p-3 rounded-xl mb-6 bg-${project.color}-500/10 text-${project.color}-400 relative z-10`}>
-                  {/* <DynamicHugeicon iconName={item.icon} size={24} color="blue" /> */}
-
-                </div>
-
-                <h3 className="text-xl font-serif text-slate-50 mb-3 relative z-10">
-                  {project.title}
-                </h3>
-                <p className="text-slate-400 font-light text-sm leading-relaxed relative z-10">
-                  {project.description}
-                </p>
-              </div>)}
-          </div>
-        </div>
-      </section>
-
+          <FeaturedInitiatives/>
       {/* Testimonial Section */}
       <section className="py-24 px-6 bg-slate-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">

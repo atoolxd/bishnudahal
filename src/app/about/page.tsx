@@ -11,6 +11,7 @@ import {
   Briefcase,
 } from 'lucide-react';
 import { useAboutMovement } from '@/hooks/useAboutMovement';
+import Cores from '@/components/about/cores';
 
 export default function About() {
   const { data, isLoading, error } = useAboutMovement();
@@ -96,63 +97,7 @@ export default function About() {
         </section>
 
         {/* Core Values & Focus */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
-          <div className="glass-card p-8 rounded-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-blue-500/10 text-blue-400 rounded-lg">
-                <Heart size={24} />
-              </div>
-              <h3 className="text-xl font-serif text-slate-50">
-                Core Values
-              </h3>
-            </div>
-
-            <ul className="space-y-4">
-              {[
-                { text: 'Service Above Self', icon: Users },
-                { text: 'Integrity & Ethics', icon: Award },
-                { text: 'Community Leadership', icon: Briefcase },
-                { text: 'Global Understanding', icon: Globe },
-              ].map((item, i) => (
-                <li
-                  key={i}
-                  className="flex items-center gap-3 text-slate-300 font-light"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                  {item.text}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="glass-card p-8 rounded-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-orange-500/10 text-orange-400 rounded-lg">
-                <BookOpen size={24} />
-              </div>
-              <h3 className="text-xl font-serif text-slate-50">
-                Focus Areas
-              </h3>
-            </div>
-
-            <ul className="space-y-4">
-              {[
-                'Youth Empowerment',
-                'Basic Education & Literacy',
-                'Economic Development',
-                'Peace & Conflict Resolution',
-              ].map((item, i) => (
-                <li
-                  key={i}
-                  className="flex items-center gap-3 text-slate-300 font-light"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        <Cores/>
       </div>
     </main>
   );
